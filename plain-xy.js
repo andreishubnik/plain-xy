@@ -1,3 +1,4 @@
+//version 0.8.2
 log = console.log;
 
 var TG_TARGET_PROTOCOL = "http";
