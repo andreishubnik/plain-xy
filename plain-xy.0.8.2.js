@@ -40,7 +40,7 @@ var httpServer = http.createServer((req,clientRes)=>{
 			tgRes.on('end',$=>clientRes.end());
 			tgRes.on('error',rejectRequest);
 		}else{
-			rejectRequest('tg responded with ' + tgRes.statusCode);
+			rejectRequest('target responded with ' + tgRes.statusCode + ' url: ' + req.headers.host);
 		}
 	}).on('error',rejectRequest);
 	req.on('data',data=>errorOccured || tgReq.write(data));
